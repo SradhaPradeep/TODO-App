@@ -1,0 +1,109 @@
+/* Reset some default browser styles */
+html, body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color to the entire page */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Style the page title */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Style the user greeting */
+h2 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Style the login/logout links */
+div {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+/* Style the task list items */
+div.task-item {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+/* Style the task ID */
+div.task-item .task-id {
+    font-weight: bold;
+}
+
+/* Style the task text */
+div.task-item .task-text {
+    margin-top: 5px;
+}
+
+/* Style the task creation date */
+div.task-item .task-created {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Style the task list container */
+div.task-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style the task list header */
+div.task-list-header {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* ... previous styles ... */
+
+/* Style the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+/* Style table headers */
+table th {
+    background-color: #007BFF;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Style table cells */
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Style alternating rows */
+table tbody tr:nth-child(odd) {
+    background-color: #f0f0f0;
+}

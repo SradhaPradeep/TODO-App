@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <link rel="stylesheet" href="{% static 'css/task_list.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <h1>Task List</h1>
+    <h2>Hello, {{ user.username | title }}</h2>
+    <div>
+        {% if request.user.is_authenticated %}
+        <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+        <a href="{% url 'login' %}">Login</a>
+        {% endif %}
+    </div>
+    <div class="task-list">
+        <table>
+            <thead>
+                <tr>
+                    {% comment %} <th>ID</th> {% endcomment %}
+                    <th>Task</th>
+                    <th>Created</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in object_list %}
+                <tr>
+                    {% comment %} <td>{{ i.id }}</td> {% endcomment %}
+                    <td>{{ i.task }}</td>
+                    <td>{{ i.created }}</td>
+                    <td>{{ i.completed }}</td>
+                    
+
+                    <td>
+                        <a href="{% url 'task_details' i.id %}" class="action-button view-button">
+                            <i class="fas fa-eye"></i> 
+                        </a>
+                        <a href="{% url 'update' i.id %}" class="action-button update-button">
+                            <i class="fas fa-edit"></i> 
+                        </a>
+                        <a href="{% url 'delete' i.id %}" class="action-button delete-button">
+                            <i class="fas fa-trash-alt"></i> 
+                        </a>
+                    </td>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

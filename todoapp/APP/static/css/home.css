@@ -1,0 +1,51 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the side hero image */
+.side-hero {
+    background-image: url('path_to_your_side_hero_image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+/* Style the container for content */
+.container {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+/* Style the headings and paragraphs */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Style the navigation links */
+.nav-pills {
+    background-color: #333;
+    padding: 10px;
+}
+
+.nav-link {
+    color: #fff !important;
+}
+
+/* Style the buttons */
+.btn {
+    margin: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
